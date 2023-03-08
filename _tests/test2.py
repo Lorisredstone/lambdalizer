@@ -1,0 +1,1 @@
+print((lambda x : (lambda f, *args: f(f, *args[:-1]) if args[0] else 0)((lambda f, stop_c, k, total : f(f, k > 1, k-1, total+k) if stop_c else total), 1, x, 0, __import__("sys").setrecursionlimit(2**31-1)))(int(input("Enter a number: "))))
