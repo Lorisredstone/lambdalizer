@@ -14,7 +14,7 @@ if len(sys.argv) != 3:
 if not os.path.isfile(sys.argv[1]):
     colorprint.colorprint("Error : the input file doesn't exist", color = "red")
     exit(1)
-    
+
 convertor = Convertor(sys.argv[1])
 output = convertor.convert()
 

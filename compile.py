@@ -5,7 +5,7 @@ import mod.colorprint as colorprint
 
 import argparse
 
-parser = argparse.ArgumentParser(description='Lance Glade')
+parser = argparse.ArgumentParser(description='Lance le convertisseur')
 parser.add_argument('-i', dest='input', type=str, help='The input file', required=True)
 parser.add_argument('-o', dest='output', type=str, help='The output file', required=True)
 

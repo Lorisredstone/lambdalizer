@@ -1,18 +1,5 @@
 call = lambda f, *args: f(f, *args[:-1])
-liste_inst = [
-   (Instruction(opname='RESUME', opcode=151, arg=0, argval=0, argrepr='', offset=0, starts_line=0, is_jump_target=False, positions=Positions(lineno=0, end_lineno=1, col_offset=0, end_col_offset=0)), "RESUME", 151, 0, 0, "", 0, 0, False),
-   (Instruction(opname='PUSH_NULL', opcode=2, arg=None, argval=None, argrepr='', offset=2, starts_line=1, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=0, end_col_offset=1)), "PUSH_NULL", 2, None, None, "", 2, 1, False),
-   (Instruction(opname='LOAD_NAME', opcode=101, arg=0, argval='f', argrepr='f', offset=4, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=0, end_col_offset=1)), "LOAD_NAME", 101, 0, "f", "f", 4, None, False),
-   (Instruction(opname='LOAD_CONST', opcode=100, arg=0, argval=3, argrepr='3', offset=6, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=2, end_col_offset=3)), "LOAD_CONST", 100, 0, 3, "3", 6, None, False),
-   (Instruction(opname='LOAD_CONST', opcode=100, arg=1, argval=4, argrepr='4', offset=8, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=5, end_col_offset=6)), "LOAD_CONST", 100, 1, 4, "4", 8, None, False),
-   (Instruction(opname='LOAD_CONST', opcode=100, arg=2, argval='b', argrepr="'b'", offset=10, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=10, end_col_offset=13)), "LOAD_CONST", 100, 2, "b", "'b'", 10, None, False),
-   (Instruction(opname='LOAD_CONST', opcode=100, arg=3, argval='2', argrepr="'2'", offset=12, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=17, end_col_offset=20)), "LOAD_CONST", 100, 3, "2", "'2'", 12, None, False),
-   (Instruction(opname='KW_NAMES', opcode=172, arg=4, argval=<unknown>, argrepr='', offset=14, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=0, end_col_offset=21)), "KW_NAMES", 172, 4, <unknown>, "", 14, None, False),
-   (Instruction(opname='PRECALL', opcode=166, arg=4, argval=4, argrepr='', offset=16, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=0, end_col_offset=21)), "PRECALL", 166, 4, 4, "", 16, None, False),
-   (Instruction(opname='CALL', opcode=171, arg=4, argval=4, argrepr='', offset=20, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=0, end_col_offset=21)), "CALL", 171, 4, 4, "", 20, None, False),
-   (Instruction(opname='RETURN_VALUE', opcode=83, arg=None, argval=None, argrepr='', offset=30, starts_line=None, is_jump_target=False, positions=Positions(lineno=1, end_lineno=1, col_offset=0, end_col_offset=21)), "RETURN_VALUE", 83, None, None, "", 30, None, False)
-]
-
+liste_inst = REPLACE_1
 
 buildins = {
     "print" : print
