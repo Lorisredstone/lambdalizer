@@ -20,7 +20,7 @@ BINARY_POW = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, sta
 COMPARE_DIFFERENT = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, stack[:-2] + [stack.pop(-2) != stack.pop(-1)], var_dict]))
 COMPARE_BIGGER    = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, stack[:-2] + [stack.pop(-2) > stack.pop(-1)], var_dict]))
 COMPARE_SMALLER   = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, stack[:-2] + [stack.pop(-2) < stack.pop(-1)], var_dict]))
-COMPARE_EQUAL   = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, stack[:-2] + [stack.pop(-2) == stack.pop(-1)], var_dict]))
+COMPARE_EQUAL     = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, stack[:-2] + [stack.pop(-2) == stack.pop(-1)], var_dict]))
 
 RETURN_VALUE = (lambda f, cmpt, insts, stack, var_dict : [stack.pop(-1), stack, var_dict])
 RESUME       = (lambda f, cmpt, insts, stack, var_dict : f(*[f, cmpt+1, insts, stack, var_dict]))
