@@ -20,7 +20,20 @@ class Convertor:
         # we make the list of instructions, in tuples
         tuple_list = []
         for inst in bytecode_list:
-            tuple_list.append((str(inst),
+            if str(inst.opname) == "KW_NAMES":
+                tuple_list.append((
+                    "\""+str(inst.opname)+"\"",
+                    str(inst.opcode),
+                    str(inst.arg),
+                    "\"UNKNOWN\"",
+                    "\""+inst.argrepr+"\"" if isinstance(inst.argrepr, str) else str(inst.argrepr),
+                    str(inst.offset),
+                    str(inst.starts_line),
+                    str(inst.is_jump_target),
+                ))
+                continue
+
+            tuple_list.append((
                     "\""+str(inst.opname)+"\"",
                     str(inst.opcode),
                     str(inst.arg),
@@ -30,5 +43,5 @@ class Convertor:
                     str(inst.starts_line),
                     str(inst.is_jump_target),
                 ))
-        self.out.setarg(1, "[\n" + ",\n".join([("   (" + ", ".join(thing for thing in element) + ")") for element in tuple_list]) + "\n]\n")
+        self.out.setarg(1, "[\n" + ",\n".join([("   (" + ", ".join(thing for thing in element) + ")") for element in tuple_list]) + "\n]")
         return self.out.tostr()
